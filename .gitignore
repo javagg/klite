@@ -1,0 +1,4 @@
+.DS_Store
+build/
+*.pro.user
+3p/kl

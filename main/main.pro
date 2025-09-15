@@ -20,7 +20,6 @@ INCLUDEPATH += $$LAYVIEW_INC $$LAYBASIC_INC $$LAYUI_INC $$TL_INC $$GSI_INC $$DB_
 DEPENDPATH += $$LAYVIEW_INC $$LAYBASIC_INC $$LAYUI_INC $$TL_INC $$GSI_INC $$DB_INC $$RDB_INC
 
 KL_DESTDIR = $$OUT_PWD/../$$KY_SRC
-# message($$KL_DESTDIR)
 
-LIBS += -L$$DESTDIR -L$$KL_DESTDIR -lklayout_layview  -lklayout_laybasic -lklayout_layui -lklayout_tl -lklayout_gsi -lklayout_db -lklayout_rdb
+LIBS += -L$$DESTDIR -L$$KL_DESTDIR -lklayout_laybasic  -lklayout_tl -lklayout_gsi -lklayout_db -lklayout_rdb -lklayout_layui -lklayout_layview
 

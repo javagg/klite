@@ -94,3 +94,11 @@ plugins.depends += lib
   main.depends += layview plugins
 }
 
+wasm {
+  QMAKE_CFLAGS += -s USE_ZLIB=1
+  QMAKE_CXXFLAGS += -s USE_ZLIB=1
+  QMAKE_LFLAGS += -s USE_ZLIB=1 -s USE_EMVAL=1
+  # QMAKE_CFLAGS += -Wno-char-conversions -Wno-implicit-int-conversion
+  # QMAKE_CXXFLAGS += -Wno-char-conversions -Wno-implicit-int-conversion
+}
+

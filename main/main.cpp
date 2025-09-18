@@ -62,13 +62,11 @@ int main(int argc, char *argv[])
     auto button = new QPushButton("Load");
 
     db::init();
-    auto p = new QFrame();
-    auto lw = new lay::LayoutViewWidget(nullptr, false, nullptr, p);
+    auto lw = new lay::LayoutViewWidget(nullptr, false, nullptr);
     auto path = extractResourceToTemp(":/t10.gds", "demo.gds");
     lw->view()->load_layout(path.toStdString(), false);
-
     layout->addWidget(button);
-    layout->addWidget(p, Qt::AlignCenter);
+    layout->addWidget(lw);
     w.setCentralWidget(widget);
     w.show();
     return a.exec();

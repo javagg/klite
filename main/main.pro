@@ -25,6 +25,10 @@ KL_DESTDIR = $$OUT_PWD/../$$KY_SRC
 
 LIBS += -L$$DESTDIR -L$$KL_DESTDIR -lklayout_laybasic  -lklayout_tl -lklayout_gsi -lklayout_db -lklayout_rdb -lklayout_layui -lklayout_layview
 
+# for plugins
+INCLUDEPATH += $$PWD/../$$KY_SRC/plugins/common $$PWD/../$$KY_SRC/plugins/streamers/gds2/db_plugin
+LIBS += -L$$KL_DESTDIR/db_plugins -lgds2
+
 wasm {
   QMAKE_CFLAGS += -sNO_DISABLE_EXCEPTION_CATCHING
   QMAKE_CXXFLAGS += -sNO_DISABLE_EXCEPTION_CATCHING

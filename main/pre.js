@@ -1,0 +1,1 @@
+Module.preRun = () => {ENV.KLAYOUT_VERBOSITY = 100};

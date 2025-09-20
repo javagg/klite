@@ -19,6 +19,7 @@ SUBDIRS = \
   img \
   edt \
   main \
+  test \
 
 tl.subdir = $$KY_SRC/tl
 gsi.subdir = $$KY_SRC/gsi
@@ -98,14 +99,4 @@ wasm {
   QMAKE_CFLAGS += -s USE_ZLIB=1
   QMAKE_CXXFLAGS += -s USE_ZLIB=1
   QMAKE_LFLAGS += -s USE_ZLIB=1
-  # QMAKE_CFLAGS += -Wno-char-conversions -Wno-implicit-int-conversion
-  # QMAKE_CXXFLAGS += -Wno-char-conversions -Wno-implicit-int-conversion
 }
-
-eval(tl.tl.QMAKE_CFLAGS += -s USE_ZLIB=1)
-eval(tl.tl.QMAKE_CXXFLAGS += -s USE_ZLIB=1)
-eval(tl.tl.QMAKE_LFLAGS += -s USE_ZLIB=1)
-# for(subdir, SUBDIRS) {
-#   message($${subdir})
-#     # eval($${subdir}.QMAKE_CFLAGS += -O2 -DPROJECT_VERSION=1.0)
-# }

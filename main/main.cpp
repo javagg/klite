@@ -18,14 +18,6 @@ int main(int argc, char *argv[])
     tl::RegisteredClass<db::StreamFormatDeclaration> format_decl (new GDS2FormatDeclaration (), 0, "GDS2");
     auto path = extractResourceToTemp(":/t10.gds", "demo.gds");
 
-    tl::InputStream stream (path.toStdString());
-    db::Reader reader (stream);
-
-    db::Layout l;
-    db::LoadLayoutOptions option;
-    db::LayerMap new_lmap = reader.read (l, option);
-    qInfo() << "new_lmap:" << new_lmap.to_string();
-
     QApplication a(argc, argv);
     QMainWindow w;
     w.resize(1200, 800);

@@ -3,3 +3,5 @@ build/
 *.pro.user
 3p/kl
 .qtc_clangd
+
+**/*/CMakeLists.txt.user

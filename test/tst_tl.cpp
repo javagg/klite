@@ -3,6 +3,7 @@
 
 #include "tlClassRegistry.h"
 #include "../main/other.h"
+#include "layLayoutView.h"
 
 // add necessary includes here
 
@@ -40,6 +41,15 @@ void tl_Tests::test_case1() {
     db::LoadLayoutOptions option;
     db::LayerMap new_lmap = reader.read (l, option);
     qInfo() << "new_lmap:" << new_lmap.to_string();
+
+
+    lay::CellView cv;
+    db::Manager manger;
+
+    lay::LayoutHandle *handle = new lay::LayoutHandle (new db::Layout (false, &manger), path.toStdString());
+    qInfo() << "LayoutHandle:" << handle;
+    cv.set (handle);
+
 }
 
 QTEST_MAIN(tl_Tests)

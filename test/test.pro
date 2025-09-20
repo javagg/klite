@@ -1,3 +1,4 @@
+DESTDIR = $$OUT_PWD/../..
 include($$PWD/../klite.pri)
 
 QT += testlib
@@ -18,11 +19,9 @@ RESOURCES += ../main/main.qrc
 INCLUDEPATH += $$LAYVIEW_INC $$LAYBASIC_INC $$LAYUI_INC $$TL_INC $$GSI_INC $$DB_INC $$RDB_INC
 DEPENDPATH += $$LAYVIEW_INC $$LAYBASIC_INC $$LAYUI_INC $$TL_INC $$GSI_INC $$DB_INC $$RDB_INC
 
-DESTDIR = $$OUT_PWD/../..
-
 KL_DESTDIR = $$OUT_PWD/../$$KY_SRC
 
-LIBS += -L$$DESTDIR -L$$KL_DESTDIR  -lklayout_tl -lklayout_gsi -lklayout_db -lklayout_rdb -lklayout_layview
+LIBS += -L$$DESTDIR -L$$KL_DESTDIR -lklayout_tl -lklayout_gsi -lklayout_db -lklayout_rdb  -lklayout_laybasic# -lklayout_layview
 
 # for plugins
 INCLUDEPATH += $$PWD/../$$KY_SRC/plugins/common $$PWD/../$$KY_SRC/plugins/streamers/gds2/db_plugin
